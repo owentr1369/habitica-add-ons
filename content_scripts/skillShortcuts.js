@@ -6,6 +6,14 @@ const findDrawerContent = setInterval(() => {
     const spellEls = drawerContent.querySelectorAll(
       ".spell-container div[id^='spell_']"
     );
-    console.log(spellEls);
+    // spellEls.forEach((el, index) => {});
+    const spellShortcutBtns = [1, 2, 3, 4];
+    spellShortcutBtns.forEach((btn, index) => {
+      window.addEventListener("keydown", (e) => {
+        if (e.key === btn.toString()) {
+          spellEls[index].click();
+        }
+      });
+    });
   }
 }, 100);
