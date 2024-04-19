@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Your Extension Name",
+    "version": "1.0",
+    "description": "Your extension description",
+    "icons": {
+        "16": "./logo.png",
+        "48": "./logo.png",
+        "128": "./logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "./content_scripts/skillShortcuts.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "./popup.html",
+        "default_icon": {
+            "16": "./logo.png",
+            "48": "./logo.png"
+        }
+    }
+}
